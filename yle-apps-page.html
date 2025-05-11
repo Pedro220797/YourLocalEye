@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YourLocalEye Apps Collection</title>
+    <style>
+        /* Basic reset and page setup */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Header styles */
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        h1 {
+            color: #3498db;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            color: #666;
+            margin-bottom: 10px;
+        }
+        
+        /* App card styles */
+        .apps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .app-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            padding: 20px;
+        }
+        
+        .app-name {
+            font-size: 1.4rem;
+            color: #3498db;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .qr-code-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        
+        .qr-code {
+            width: 180px;
+            height: 180px;
+            background-color: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .qr-code img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        
+        /* Fallback for missing images */
+        .qr-code .fallback {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            background-color: #f0f0f0;
+            color: #666;
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
+        }
+        
+        .store-links {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .store-link {
+            display: inline-block;
+            padding: 10px 15px;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 500;
+            text-align: center;
+            width: 48%;
+        }
+        
+        .play-store {
+            background-color: #4CAF50;
+        }
+        
+        .app-store {
+            background-color: #000;
+        }
+        
+        /* Footer styles */
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            color: #666;
+            padding: 20px 0;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .apps-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .apps-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .store-links {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .store-link {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>YourLocalEye Apps Collection</h1>
+            <p class="subtitle">Explore our local guide apps for various regions</p>
+            <p class="subtitle">Scan the QR code or click on the store links below to download our apps</p>
+        </header>
+        
+        <div class="apps-grid">
+            <!-- YLE AubeChampagne -->
+            <div class="app-card">
+                <h2 class="app-name">YLE AubeChampagne</h2>
+                <div class="qr-code-container">
+                    <div class="qr-code">
+                        <img src="https://drive.google.com/thumbnail?id=1OcCZ3eWf8ZkhxFg6Rtnuemy3VfLUOXne" alt="YLE AubeChampagne QR Code" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="fallback">Scan QR code to download</div>
+                    </div>
+                </div>
+                <div class="store-links">
+                    <a href="https://play.google.com/store/apps/details?id=yourlocaleye.aube.champagne" target="_blank" class="store-link play-store">
+                        Google Play
+                    </a>
+                    <a href="https://apps.apple.com/fr/app/yourlocaleye-aube-champagne/id6447764381" target="_blank" class="store-link app-store">
+                        App Store
+                    </a>
+                </div>
+            </div>
+            
+            <!-- YLE Aude -->
+            <div class="app-card">
+                <h2 class="app-name">YLE Aude</h2>
+                <div class="qr-code-container">
+                    <div class="qr-code">
+                        <img src="https://drive.google.com/thumbnail?id=1h5AYQTm8LBlhFy72r9cxbSlKQjABdx25" alt="YLE Aude QR Code" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="fallback">Scan QR code to download</div>
+                    </div>
+                </div>
+                <div class="store-links">
+                    <a href="https://play.google.com/store/apps/details?id=yourlocaleye.aude" target="_blank" class="store-link play-store">
+                        Google Play
+                    </a>
+                    <a href="https://apps.apple.com/fr/app/yourlocaleye-aude/id6447764400" target="_blank" class="store-link app-store">
+                        App Store
+                    </a>
+                </div>
+            </div>
+            
+            <!-- YLE Ardeche -->
+            <div class="app-card">
+                <h2 class="app-name">YLE Ardeche</h2>
+                <div class="qr-code-container">
+                    <div class="qr-code">
+                        <img src="https://drive.google.com/thumbnail?id=1Gb_JNCCixBhBYDewHT3u9y7gQF2Okrg4" alt="YLE Ardeche QR Code" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="fallback">Scan QR code to download</div>
+                    </div>
+                </div>
+                <div class="store-links">
+                    <a href="https://play.google.com/store/apps/details?id=your.local.eye.ardeche" target="_blank" class="store-link play-store">
+                        Google Play
+                    </a>
+                    <a href="https://apps.apple.com/fr/app/yourlocaleye-ard%C3%A8che/id1671588518" target="_blank" class="store-link app-store">
+                        App Store
+                    </a>
+                </div>
+            </div>
+            
+            <!-- YLE Ariege -->
+            <div class="app-card">
+                <h2 class="app-name">YLE Ariege</h2>
+                <div class="qr-code-container">
+                    <div class="qr-code">
+                        <img src="https://drive.google.com/thumbnail?id=1ZtltCwPMCD48zNORC3GSBRVqawhJDDaL" alt="YLE Ariege QR Code" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="fallback">Scan QR code to download</div>
+                    </div>
+                </div>
+                <div class="store-links">
+                    <a href="https://play.google.com/store/apps/details?id=botler.yleariege" target="_blank" class="store-link play-store">
+                        Google Play
+                    </a>
+                    <a href="https://apps.apple.com/fr/app/yourlocaleye-ari%C3%A8ge/id6717608168" target="_blank" class="store-link app-store">
+                        App Store
+                    </a>
+                </div>
+            </div>
+            
+            <!-- YLE Herault -->
+            <div class="app-card">
+                <h2 class="app-name">YLE Herault</h2>
+                <div class="qr-code-container">
+                    <div class="qr-code">
+                        <img src="https://drive.google.com/thumbnail?id=1f9EnmU3LS1M7RZVVw7fxNXcj41GUUp6b" alt="YLE Herault QR Code" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="fallback">Scan QR code to download</div>
+                    </div>
+                </div>
+                <div class="store-links">
+                    <a href="https://play.google.com/store/apps/details?id=your.local.eye.herault" target="_blank" class="store-link play-store">
+                        Google Play
+                    </a>
+                    <a href="https://apps.apple.com/fr/app/yourlocaleye-h%C3%A9rault/id6466996267" target="_blank" class="store-link app-store">
+                        App Store
+                    </a>
+                </div>
+            </div>
+            
+            <!-- YLE Limousin -->
+            <div class="app-card">
+                <h2 class="app-name">YLE Limousin</h2>
+                <div class="qr-code-container">
+                    <div class="qr-code">
+                        <img src="https://drive.google.com/thumbnail?id=1gLyeORdlJfkXzyGlqj1h1pK-vj-cb8ty" alt="YLE Limousin QR Code" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="fallback">Scan QR code to download</div>
+                    </div>
+                </div>
+                <div class="store-links">
+                    <a href="https://play.google.com/store/apps/details?id=your.local.eye.limousin" target="_blank" class="store-link play-store">
+                        Google Play
+                    </a>
+                    <a href="https://apps.apple.com/fr/app/yourlocaleye-limousin/id6468487310" target="_blank" class="store-link app-store">
+                        App Store
+                    </a>
+                </div>
+            </div>
+            
+            <!-- YLE Limburg -->
+            <div class="app-card">
+                <h2 class="app-name">YLE Limburg</h2>
+                <div class="qr-code-container">
+                    <div class="qr-code">
+                        <img src="https://drive.google.com/thumbnail?id=1SvGdK7MQo5X2Z8lMWbigleqCRgfKbPsb" alt="YLE Limburg QR Code" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="fallback">Scan QR code to download</div>
+                    </div>
+                </div>
+                <div class="store-links">
+                    <a href="https://play.google.com/store/apps/details?id=botler.ylelimbourg" target="_blank" class="store-link play-store">
+                        Google Play
+                    </a>
+                    <a href="https://apps.apple.com/fr/app/yourlocaleye-limburg/id6497331308?uo=4" target="_blank" class="store-link app-store">
+                        App Store
+                    </a>
+                </div>
+            </div>
+            
+            <!-- YLE La Rioja -->
+            <div class="app-card">
+                <h2 class="app-name">YLE La Rioja</h2>
+                <div class="qr-code-container">
+                    <div class="qr-code">
+                        <img src="https://drive.google.com/thumbnail?id=141WQyyOdUS41JWsvnoWPT1kniUt4U5Nd" alt="YLE La Rioja QR Code" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="fallback">Scan QR code to download</div>
+                    </div>
+                </div>
+                <div class="store-links">
+                    <a href="https://play.google.com/store/apps/details?id=your.local.eye.larioja" target="_blank" class="store-link play-store">
+                        Google Play
+                    </a>
+                    <a href="https://apps.apple.com/fr/app/yourlocaleye-la-rioja/id6468264562" target="_blank" class="store-link app-store">
+                        App Store
+                    </a>
+                </div>
+            </div>
+            
+            <!-- YLE Loire-Atlantique -->
+            <div class="app-card">
+                <h2 class="app-name">YLE Loire-Atlantique</h2>
+                <div class="qr-code-container">
+                    <div class="qr-code">
+                        <img src="https://drive.google.com/thumbnail?id=17TnD2JNS3H67xRqwXQS1wyC1t38jcStS" alt="YLE Loire-Atlantique QR Code" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="fallback">Scan QR code to download</div>
+                    </div>
+                </div>
+                <div class="store-links">
+                    <a href="https://play.google.com/store/apps/details?id=botler.yleloire&hl=en_US&gl=US" target="_blank" class="store-link play-store">
+                        Google Play
+                    </a>
+                    <a href="https://apps.apple.com/fr/app/yourlocaleye-loire-atlantique/id6737223866" target="_blank" class="store-link app-store">
+                        App Store
+                    </a>
+                </div>
+            </div>
+            
+            <!-- YLE Moselle -->
+            <div class="app-card">
+                <h2 class="app-name">YLE Moselle</h2>
+                <div class="qr-code-container">
+                    <div class="qr-code">
+                        <img src="https://drive.google.com/thumbnail?id=1cK41HnScF_9Saursau67PmfF7YxLT0Mb" alt="YLE Moselle QR Code" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="fallback">Scan QR code to download</div>
+                    </div>
+                </div>
+                <div class="store-links">
+                    <a href="https://play.google.com/store/apps/details?id=botler.ylemoselle" target="_blank" class="store-link play-store">
+                        Google Play
+                    </a>
+                    <a href="https://apps.apple.com/fr/app/yourlocaleye-moselle/id6466411680" target="_blank" class="store-link app-store">
+                        App Store
+                    </a>
+                </div>
+            </div>
+            
+            <!-- YLE Normandie -->
+            <div class="app-card">
+                <h2 class="app-name">YLE Normandie</h2>
+                <div class="qr-code-container">
+                    <div class="qr-code">
+                        <img src="https://drive.google.com/thumbnail?id=1DrpI2s4bGa53M2w5tYmfNNLekHMmNSRZ" alt="YLE Normandie QR Code" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="fallback">Scan QR code to download</div>
+                    </div>
+                </div>
+                <div class="store-links">
+                    <a href="https://play.google.com/store/apps/details?id=botler.ylenormandie" target="_blank" class="store-link play-store">
+                        Google Play
+                    </a>
+                    <a href="https://apps.apple.com/fr/app/yourlocaleye-normandie/id6670618584" target="_blank" class="store-link app-store">
+                        App Store
+                    </a>
+                </div>
+            </div>
+            
+            <!-- YLE Tunisia -->
+            <div class="app-card">
+                <h2 class="app-name">YLE Tunisia</h2>
+                <div class="qr-code-container">
+                    <div class="qr-code">
+                        <img src="https://drive.google.com/thumbnail?id=1nXYPOJHdDtxW2CyHlnFX-LUThhXypgzV" alt="YLE Tunisia QR Code" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="fallback">Scan QR code to download</div>
+                    </div>
+                </div>
+                <div class="store-links">
+                    <a href="https://play.google.com/store/apps/details?id=botler.yletunisia&hl=en_US&gl=US" target="_blank" class="store-link play-store">
+                        Google Play
+                    </a>
+                    <a href="https://apps.apple.com/fr/app/yourlocaleye-tunisia/id6745153563" target="_blank" class="store-link app-store">
+                        App Store
+                    </a>
+                </div>
+            </div>
+            
+            <!-- YLE Savoie -->
+            <div class="app-card">
+                <h2 class="app-name">YLE Savoie</h2>
+                <div class="qr-code-container">
+                    <div class="qr-code">
+                        <img src="https://drive.google.com/thumbnail?id=1GuB3J-PZi2OhuaYuh6bTsUFTvhu1GbKG" alt="YLE Savoie QR Code" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="fallback">Scan QR code to download</div>
+                    </div>
+                </div>
+                <div class="store-links">
+                    <a href="https://play.google.com/store/apps/details?id=botler.ylesavoie" target="_blank" class="store-link play-store">
+                        Google Play
+                    </a>
+                    <a href="https://apps.apple.com/fr/app/yourlocaleye-savoie/id6587575939" target="_blank" class="store-link app-store">
+                        App Store
+                    </a>
+                </div>
+            </div>
+            
+            <!-- YLE Vaucluse -->
+            <div class="app-card">
+                <h2 class="app-name">YLE Vaucluse</h2>
+                <div class="qr-code-container">
+                    <div class="qr-code">
+                        <img src="https://drive.google.com/thumbnail?id=1lVH6rFZ4b6X5I3V-bdt2afAjfwwX5rJr" alt="YLE Vaucluse QR Code" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="fallback">Scan QR code to download</div>
+                    </div>
+                </div>
+                <div class="store-links">
+                    <a href="https://play.google.com/store/apps/details?id=ville.carpentras" target="_blank" class="store-link play-store">
+                        Google Play
+                    </a>
+                    <a href="https://apps.apple.com/fr/app/yourlocaleye-vaucluse/id1633958138" target="_blank" class="store-link app-store">
+                        App Store
+                    </a>
+                </div>
+            </div>
+            
+            <!-- YLE Vendee -->
+            <div class="app-card">
+                <h2 class="app-name">YLE Vendee</h2>
+                <div class="qr-code-container">
+                    <div class="qr-code">
+                        <img src="https://drive.google.com/thumbnail?id=1w-KsWizQm6wMLecqjXfqrswmcLhKTfNp" alt="YLE Vendee QR Code" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="fallback">Scan QR code to download</div>
+                    </div>
+                </div>
+                <div class="store-links">
+                    <a href="https://play.google.com/store/apps/details?id=your.local.eye.vendee" target="_blank" class="store-link play-store">
+                        Google Play
+                    </a>
+                    <a href="https://apps.apple.com/fr/app/yourlocaleye-vend%C3%A9e/id6468485233" target="_blank" class="store-link app-store">
+                        App Store
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>&copy; 2025 YourLocalEye. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
